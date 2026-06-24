@@ -1,0 +1,39 @@
+// Go to next page
+function goNext() {
+  let name = document.getElementById("name").value;
+  if(name.trim() === "") {
+    alert("Please enter your name");
+    return;
+  }
+  localStorage.setItem("guestName", name);
+  window.location.href = "invite.html";
+}
+
+// Load name on second page
+window.onload = function() {
+  let guest = localStorage.getItem("guestName");
+  if(document.getElementById("guestName")) {
+    document.getElementById("guestName").innerText = guest;
+  }
+}
+
+// Open envelope animation
+function openEnvelope() {
+  document.getElementById("flap").style.transform = "rotateX(180deg)";
+  document.getElementById("letter").style.transform = "translateY(0)";
+  launchConfetti();
+}
+
+// Confetti burst
+function launchConfetti() {
+  let canvas = document.getElementById("confetti");
+  let ctx = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  for(let i=0; i<150; i++) {
+    ctx.fillStyle = "hsl(" + Math.random()*360 + ",100%,50%)";
+    ctx.fillRect(Math.random()*canvas.width, Math.random()*canvas.height, 5, 5);
+  }
+}

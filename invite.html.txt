@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invitation Open</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg">
+
+<div class="invite-container">
+
+  <div class="emoji">✨🎉💫🤍</div>
+
+  <div class="envelope" id="envelope">
+    <div class="flap" id="flap"></div>
+    <div class="seal" onclick="openEnvelope()"></div>
+
+    <div class="letter" id="letter">
+      <h2 id="guestName"></h2>
+      <p>You are warmly invited 💌</p>
+    </div>
+  </div>
+
+</div>
+
+<canvas id="confetti"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>

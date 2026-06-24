@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+}
+
+/* Background */
+.bg {
+  background: url('https://i.ibb.co/9h3t7Kz/floral.png');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: rgba(255,255,255,0.85);
+}
+
+/* First Page */
+.container {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.arabic {
+  font-size: 40px;
+  color: #2c2c2c;
+  font-weight: bold;
+}
+
+.middle-image img {
+  width: 220px;
+  margin: 30px 0;
+}
+
+.input-box input {
+  padding: 12px;
+  width: 250px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.input-box button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+/* Second Page */
+.invite-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.emoji {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Envelope */
+.envelope {
+  width: 300px;
+  height: 200px;
+  background: #d8c3a5;
+  margin: auto;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  perspective: 1000px;
+}
+
+.flap {
+  width: 100%;
+  height: 100%;
+  background: #c5a880;
+  position: absolute;
+  top: 0;
+  transform-origin: top;
+  transition: 1s;
+}
+
+.seal {
+  width: 25px;
+  height: 25px;
+  background: maroon;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.letter {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background: white;
+  top: 5%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100%);
+  transition: 1s;
+}
